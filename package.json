@@ -1,0 +1,106 @@
+{
+  "name": "kilo--frontend",
+  "version": "0.0.1",
+  "scripts": {
+    "clean-deps": "rimraf node_modules"
+  },
+  "config": {
+    "//": "Entry files",
+    "host": "127.0.0.1",
+    "port": "3000",
+    "baseUrl": "./",
+    "directories": {
+      "source": "src",
+      "destination": "build",
+      "temporary": "tmp",
+      "//": "Directories relative to `source` directory",
+      "modules": "_modules",
+      "layouts": "_layouts",
+      "images": "_images",
+      "fonts": "_fonts",
+      "videos": "_videos",
+      "styles": "_styles",
+      "scripts": "_scripts",
+      "data": "_data"
+    },
+    "entries": {
+      "js": "main**.js",
+      "css": "main**.{sass,scss}"
+    }
+  },
+  "dependencies": {
+    "jquery": "~3.1.1",
+    "normalize.css": "~5.0.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "~6.7.5",
+    "babel-core": "~6.23.1",
+    "babel-eslint": "~7.1.1",
+    "babel-plugin-add-module-exports": "~0.2.1",
+    "babel-preset-es2015": "~6.22.0",
+    "babelify": "~7.3.0",
+    "barba.js": "^1.0.0",
+    "browser-sync": "~2.18.0",
+    "browserify": "~14.1.0",
+    "del": "~2.2.2",
+    "envify": "~4.0.0",
+    "foldero": "~0.1.1",
+    "foundation-sites": "^6.3.1",
+    "glob": "~7.1.1",
+    "gsap": "^1.19.1",
+    "gulp": "~3.9.1",
+    "gulp-changed": "~2.0.0",
+    "gulp-cssnano": "~2.1.2",
+    "gulp-data": "~1.2.1",
+    "gulp-eslint": "~3.0.1",
+    "gulp-htmlmin": "~3.0.0",
+    "gulp-if": "~2.0.2",
+    "gulp-imagemin": "~3.1.1",
+    "gulp-jade": "~1.1.0",
+    "gulp-load-plugins": "~1.5.0",
+    "gulp-notify": "~3.0.0",
+    "gulp-plumber": "~1.1.0",
+    "gulp-postcss": "~6.3.0",
+    "gulp-rename": "~1.2.2",
+    "gulp-sass": "~3.1.0",
+    "gulp-sourcemaps": "~2.4.1",
+    "gulp-uglify": "~2.0.1",
+    "gulp-util": "~3.0.8",
+    "imagemin-pngquant": "~5.0.0",
+    "imagemin-svgo": "~5.2.0",
+    "imagesloaded": "^4.1.2",
+    "isotope-layout": "^3.0.4",
+    "jade": "~1.11.0",
+    "js-yaml": "~3.8.1",
+    "loadash": "0.0.1",
+    "lodash": "^4.17.4",
+    "minimist": "~1.2.0",
+    "rimraf": "~2.6.1",
+    "scrolldir": "^1.2.9",
+    "scrollmagic": "^2.0.5",
+    "scrollmonitor": "^1.2.3",
+    "swiper": "^3.4.2",
+    "vinyl-buffer": "~1.0.0",
+    "vinyl-source-stream": "~1.1.0",
+    "watchify": "~3.9.0 "
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "//": "CUSTOM CONFIGURATION",
+  "browser": {
+    "ScrollMagic": "./node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js",
+    "animation.TweenMax": "./node_modules/scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js",
+    "debug.addIndicators": "./node_modules/scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"
+  },
+  "browserify-shim": {
+    "ScrollMagic": "ScrollMagic",
+    "animation.TweenMax": "TweenMax",
+    "debug.addIndicators": "addIndicators"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  }
+}
